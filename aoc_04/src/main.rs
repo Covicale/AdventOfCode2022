@@ -1,8 +1,5 @@
 use std::fs;
 
-// (4, 6) (6, 6)
-// (2, 8) (3, 7)
-
 fn part_two(input: &Vec<[[u32; 2]; 2]>) -> u32 {
     let mut sum = 0;
     for pair in input {
@@ -30,6 +27,7 @@ fn get_vec(fs: &String) -> Vec<[[u32; 2]; 2]>{
         for i in 0..sections.len(){
             let pairs: Vec<&str> = sections[i].split("-").collect(); 
             for j in 0..pairs.len(){
+                println!("{}", pairs[j]);
                 values[i][j] = pairs[j].parse().unwrap();
             }      
         }
